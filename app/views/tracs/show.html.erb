@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flight:</strong>
+  <%= @trac.flight %>
+</p>
+
+<p>
+  <strong>Airline:</strong>
+  <%= @trac.airline %>
+</p>
+
+<%= link_to 'Edit', edit_trac_path(@trac) %> |
+<%= link_to 'Back', tracs_path %>

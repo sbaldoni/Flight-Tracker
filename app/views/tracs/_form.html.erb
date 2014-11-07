@@ -1,0 +1,25 @@
+<%= form_for(@trac) do |f| %>
+  <% if @trac.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trac.errors.count, "error") %> prohibited this trac from being saved:</h2>
+
+      <ul>
+      <% @trac.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flight %><br>
+    <%= f.text_field :flight %>
+  </div>
+  <div class="field">
+    <%= f.label :airline %><br>
+    <%= f.text_field :airline %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
